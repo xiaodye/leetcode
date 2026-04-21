@@ -1,0 +1,13 @@
+{
+  "languages": {
+    "TypeScript": {
+      "tab_size": 4, // 将这里的数字改成你想要的空格数
+    },
+    "Go": {
+      "tab_size": 4,
+    },
+    "Python": {
+      "tab_size": 4,
+    },
+  },
+}
