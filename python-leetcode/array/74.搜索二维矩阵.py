@@ -11,15 +11,15 @@ class Solution:
             if target > matrix[i][n - 1]:
                 continue
 
-            l = 0
-            r = n - 1
+            left = 0
+            right = n - 1
 
-            while l <= r:
-                mid = l + (r - l) // 2
+            while left <= right:
+                mid = left + (right - left) // 2
                 if matrix[i][mid] > target:
-                    r = mid - 1
+                    right = mid - 1
                 elif matrix[i][mid] < target:
-                    l = mid + 1
+                    left = mid + 1
                 else:
                     return True
         return False
