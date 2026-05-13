@@ -1,0 +1,28 @@
+from typing import List
+
+class Solution:
+    def insertSort(self, arr: List[int]) -> List[int]:
+        """
+        直接插入排序
+
+        时间复杂度：O(n2)
+
+        @param arr 待排序数组
+        @returns 排序后的数组（原地修改，返回原数组引用）
+        """
+        # 外层循环代表要进行的轮数，每轮可以排序好一个数。
+        # i用于标识每次被插入的元素的索引，temp用来保存当前需要插入的元素。
+        # j用于定位要插入的位置。
+        for i in range(1, len(arr)):
+            j = i
+            temp = arr[i]
+
+            while j - 1 >= 0 and arr[j - 1] > temp:
+                # 这个赋值操作相当于索引为j-1的元素往后挪，不用担心arr[j]，它已经提前被保存到了temp
+                arr[j] = arr[j - 1]
+                j -= 1
+
+            # 循环让位，最后得到的 j 就是 temp 的正确索引
+            arr[j] = temp
+
+        return arr
