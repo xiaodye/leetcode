@@ -2,6 +2,9 @@
   "languages": {
     "TypeScript": {
       "tab_size": 4, // 将这里的数字改成你想要的空格数
+      "formatter":"prettier",
+      "format_on_save": "on",
+      "use_on_type_format": true
     },
     "Go": {
       "tab_size": 4,
